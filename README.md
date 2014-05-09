@@ -36,6 +36,6 @@ done , now your config is ready to store on s3.
 Using
 ------
 
-1. edit your mongobackup.conf with your configs.
+1. edit your mongobackup.conf with your config.
 2. change the permission for mongobackup.sh
 3. execute.
