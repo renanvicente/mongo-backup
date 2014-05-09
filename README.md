@@ -17,7 +17,7 @@ Dependencies
 
 `yum install s3cmd python-magic`
 
-** Steps for using store on S3:**
+**Steps for using store on S3:**
 
 1. Set up an Amazon S3 account: <http://aws.amazon.com/s3/>
 2. Install the dependency ( s3cmd )
