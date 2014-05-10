@@ -41,11 +41,11 @@ done , now your config is ready to store on s3.
 
 Example:
 
-   RSYNC_PATH="/usr/bin/rsync"
-   RSYNC_OPTS="-auvvz"
-   REMOTE_USER="renanvicente"
-   REMOTE_HOST="10.10.50.50"
-   REMOTE_MODULE="backup"
+    RSYNC_PATH="/usr/bin/rsync"
+    RSYNC_OPTS="-auvvz"
+    REMOTE_USER="renanvicente"
+    REMOTE_HOST="10.10.50.50"
+    REMOTE_MODULE="backup"
 
 done , now your config is ready to store in rsync server.
 
