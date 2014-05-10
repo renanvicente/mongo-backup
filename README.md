@@ -56,3 +56,9 @@ Using
 1. edit your mongobackup.conf with your config.
 2. change the permission for mongobackup.sh
 3. execute.
+
+# To-do List
+
+- [ ] add mail report.
+- [ ] add check problem when is backing up and send error support.
+- [ ] add scp store support.
