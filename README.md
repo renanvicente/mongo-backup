@@ -37,7 +37,7 @@ done , now your config is ready to store on s3.
 **Steps for using store in rsync server.**
 
 1. Install the dependency ( rsync )
-2. Set your rsync configs on mongobackup.conf
+2. Set your rsync settings for mongobackup.conf
 
 Example:
 
