@@ -154,6 +154,7 @@ function do_backup {
 
   # Add timestamp to backup
   DUMP_FILE="$BACKUP_DIR/mongodb-$HOSTNAME-$TIMESTAMP"
+  JUST_DUMP_FILE="mongodb-$HOSTNAME-$TIMESTAMP"
   runcmd mv dump $DUMP_FILE
 
 }
@@ -163,12 +164,15 @@ function do_compress {
   runcmd $TAR_PATH cf $DUMP_FILE.tar $DUMP_FILE
   runcmd rm -r $DUMP_FILE
   DUMP_FILE="$DUMP_FILE.tar"
+  JUST_DUMP_FILE="$JUST_DUMP_FILE.tar"
   if [ $COMPRESS == "gzip" ];then
         runcmd $GZIP_PATH $DUMP_FILE
 	DUMP_FILE="$DUMP_FILE.gz"
+	JUST_DUMP_FILE="$JUST_DUMP_FILE.gz"
   elif [ $COMPRESS == "bzip2" ];then
         runcmd $BZIP2_PATH $DUMP_FILE
 	DUMP_FILE="$DUMP_FILE.bz2"
+	JUST_DUMP_FILE="$JUST_DUMP_FILE.bz2"
   fi
 
 }
@@ -177,7 +181,7 @@ function upload_s3 {
 
   if [ ! -z $S3_BUCKET_NAME ] && [ ! -z $S3_BUCKET_PATH ] && [ $S3 == "1" ];then
         # Upload to S3
-        runcmd $S3CMD_PATH put $DUMP_FILE s3://$S3_BUCKET_NAME/$S3_BUCKET_PATH/$DUMP_FILE
+        runcmd $S3CMD_PATH put $DUMP_FILE s3://$S3_BUCKET_NAME/$S3_BUCKET_PATH/$JUST_DUMP_FILE
   fi
 }
 
