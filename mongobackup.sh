@@ -7,6 +7,7 @@
 # Github:         https://www.github.com/renanvicente
 # Linkedin:       http://www.linkedin.com/pub/renan-silva/6a/802/59b/en
 
+DIR=$(dirname "${BASH_SOURCE[0]}")
 
 # Check if have a parameter -f to load config file
 while getopts f: OPT
@@ -20,8 +21,8 @@ if [ ! -z "$CONFIG_FILE" ] ; then
   if [ -f $CONFIG_FILE ];then
 	. $CONFIG_FILE
   fi
-elif [ -f "mongobackup.conf" ]; then
-  . ./mongobackup.conf
+elif [ -f "$DIR/mongobackup.conf" ]; then
+  . $DIR/mongobackup.conf
 else
   logger -s "unable to read the configuration file, plese create mongobackup.conf"
   exit 1
