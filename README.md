@@ -1,7 +1,15 @@
-mongo-backup 0.0.2
+mongo-backup 0.0.3
 ============
 
 Script to backup upe MongoDB databases and optionally store in Amazon S3 (Simple Storage Directory) or a server via rsync.
+
+
+CHANGELOG
+-------------
+
+- Add new Debug mode.
+- Improve log.
+- Add support to execute from whereever you want on the system.
 
 Dependencies
 -------------
