@@ -33,9 +33,9 @@ runcmd() {
 
     if [ $DEBUG -eq 1 ]; then
         echo DEBUG: --- "$@"
-        "$@"
+        "$@" 2>&1 | tee -a $LOG_FILE
     else
-	"$@" &>> $LOG_FILE
+	"$@" 2>&1 | tee -a $LOG_FILE
     fi  
 }
 
