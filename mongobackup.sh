@@ -1,6 +1,6 @@
 #!/bin/bash
 # Project Source: https://github.com/renanvicente/mongo-backup
-# Version:        0.0.2
+# Version:        0.0.3
 # Author:         Renan Vicente
 # Mail:           renanvice@gmail.com
 # Website:        http://www.renanvicente.com
